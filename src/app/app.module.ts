@@ -37,24 +37,24 @@ import { Toast } from "@ionic-native/toast";
 
 // Pages
 import { AboutPage } from '../pages/about/about';
-import { AccountPage } from '../pages/account/account';
+// import { AccountPage } from '../pages/account/account';
 import { CallAttendPage } from "../pages/call-attend/call-attend";
 import { ChangepasswordPage } from "../pages/changepassword/changepassword";
 // import { CommentPage} from "../pages/comment/comment";
 import { CommentsPage} from "../pages/comments/comments";
-import { ConnectPage } from '../pages/connect/connect';
-import { ContactPage } from '../pages/contact/contact';
+// import { ConnectPage } from '../pages/connect/connect';
+// import { ContactPage } from '../pages/contact/contact';
 import { DetailPage } from "../pages/detail/detail";
 import { EditModalPage } from "../pages/edit-modal/edit-modal";
 import { ExamPage } from '../pages/exam/exam';
 // import { ExamplePage } from '../pages/example/example';
 import { ForgotenPage } from "../pages/forgoten/forgoten";
-import { HomePage } from '../pages/home/home';
-import { LoginPage } from '../pages/login/login';
+// import { HomePage } from '../pages/home/home';
+// import { LoginPage } from '../pages/login/login';
 import { ManagePage  } from '../pages/manage/manage';
-import { MessagePage } from "../pages/message/message";
+// import { MessagePage } from "../pages/message/message";
 import { MessagepostPage } from "../pages/messagepost/messagepost";
-import { NotificationPage } from "../pages/notification/notification";
+// import { NotificationPage } from "../pages/notification/notification";
 import { NotificationpostPage } from "../pages/notificationpost/notificationpost";
 import { ProfileListPage } from "../pages/profile-list/profile-list";
 import { SchoolPage } from "../pages/school/school";
@@ -64,7 +64,7 @@ import { SignupPage } from '../pages/signup/signup';
 import { StudentPage } from '../pages/student/student';
 import { studentprofilePage } from '../pages/student-profile/student-profile';
 // import { StudentReportPage } from '../pages/student-report/student-report';
-import { TabsPage } from '../pages/tabs/tabs';
+// import { TabsPage } from '../pages/tabs/tabs';
 import { TeaccherSubjectPage } from "../pages/teaccher-subject/teaccher-subject";
 import { TeacherPage } from '../pages/teacher/teacher';
 import { TimelinePage} from "../pages/timeline/timeline";
@@ -110,24 +110,24 @@ import { TimelinePage} from "../pages/timeline/timeline";
 	],
     declarations: [
 		AboutPage,
-		AccountPage,
+		// AccountPage,
 		CallAttendPage,
 		ChangepasswordPage,
 		// CommentsPage,
 		CommentsPage,
-		ConnectPage,
-		ContactPage,
+		// ConnectPage,
+		// ContactPage,
 		DetailPage,
 		EditModalPage,
 		ExamPage,
 		ForgotenPage,
-		HomePage,
-		LoginPage,
-		MessagePage,
+		// HomePage,
+		// LoginPage,
+		// MessagePage,
 		ManagePage,
 		MessagepostPage,
 		MyApp,
-		NotificationPage,
+		// NotificationPage,
 		NotificationpostPage,
 		ProfileListPage,
 		SchoolPage,
@@ -137,31 +137,31 @@ import { TimelinePage} from "../pages/timeline/timeline";
 		StudentPage,
 		studentprofilePage,
 		// StudentReportPage,
-		TabsPage,
+		// TabsPage,
 		TeaccherSubjectPage,
 		TeacherPage,
 		TimelinePage
     ],
     entryComponents: [
 		AboutPage,
-		AccountPage,
+		// AccountPage,
 		CallAttendPage,
 		ChangepasswordPage,
 		// CommentsPage,
 		CommentsPage,
-		ConnectPage,
-		ContactPage,
+		// ConnectPage,
+		// ContactPage,
 		DetailPage,
 		EditModalPage,
 		ExamPage,
 		ForgotenPage,
-		HomePage,
-		LoginPage,
-		MessagePage,
+		// HomePage,
+		// LoginPage,
+		// MessagePage,
 		ManagePage,
 		MessagepostPage,
 		MyApp,
-		NotificationPage,
+		// NotificationPage,
 		NotificationpostPage,
 		ProfileListPage,
 		SchoolPage,
@@ -171,7 +171,7 @@ import { TimelinePage} from "../pages/timeline/timeline";
 		StudentPage,
 		studentprofilePage,
 		// StudentReportPage,
-		TabsPage,
+		// TabsPage,
 		TeaccherSubjectPage,
 		TeacherPage,
 		TimelinePage

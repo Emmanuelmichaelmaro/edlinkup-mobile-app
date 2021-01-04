@@ -1,54 +1,46 @@
-
-
-<ion-header   color="light"   >
-
-<ion-navbar >
- <ion-buttons  style="float:left !important;">
- <button  ion-button icon-only clear (click)="openDetail()">
-        <ion-icon  ios="ios-menu" md="md-menu"></ion-icon>
-		</button>
-	  </ion-buttons>
-    <ion-title text-center>EdLINKUP</ion-title>
-	<ion-buttons end>
-
-      <button  (click)="search();" ion-button icon-only clear>
-        <ion-icon ios="ios-search" md="md-search"></ion-icon>
-      </button>
-
-    </ion-buttons>
-  </ion-navbar>
+<ion-header color="light">
+    <ion-navbar>
+        <ion-buttons left>
+            <button ion-button icon-only menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        
+        <ion-title text-center>EdLINKUP</ion-title>
+        
+        <ion-buttons end>
+            <button ion-button icon-only clear (click)="search()">
+                <ion-icon ios="ios-search" md="md-search"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
-<ion-content style="margin:0;">
 
-
-
-<!-- pull to refresh..... #contentRef (ionScroll)="scrollingFun($event)" (ionScroll)="scrollingFun($event)" -->
-    <ion-refresher class="spinner-calm" (ionRefresh)="doRefresh($event)">
-        <ion-refresher-content></ion-refresher-content>
+<ion-content padding>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="chevron-down-circle-outline" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing..."></ion-refresher-content>
     </ion-refresher>
-<!--ion-card -->
 
-	
-	
-	<ion-list *ngIf="acclist>0" style="background-color:#FFFFFF;border-bottom:#ccc 2px solid; padding-left:10px; ">
-	  
-	<h2  style="font-size:12px; font-weight:600 !important;">Your Accounts</h2>
-    <ion-scroll scrollX="true">
-       <div  *ngFor="let item of accounts" class="scroll-item" (click)="openManager(item.name,item.idmember,item.position,item)" >
-	   <ion-row *ngIf="(item.position=='teacher')||(item.position=='student')" >
-       <ion-col text-center>
-       <img [src]="imgaddlogo+userphoto(item.photo)" style="width:80px;height:80px; border-radius:60px; padding:2px; border:#497953 thin solid;">
-	   <p style="font-size:11px; text-align:center; text-transform:Capitalize; color:#000;padding:1px; margin:0;">{{item.name}}<br/> {{item.position}}</p>
-	   <!--p style="font-size:11px; text-align:center;text-transform:Capitalize; color:#000;padding:1px; margin:0;">{{item.profile}}  </p-->
-	   </ion-col>
- </ion-row>
-	</div>
+    <ion-list *ngIf="acclist>0">
+        <h2 style="font-size: 12px; font-weight: 600 !important;">Your Accounts</h2>
+        
+        <ion-scroll scrollX="true">
+            <div *ngFor="let item of accounts" class="scroll-item" (click)="openManager(item.name, item.idmember, item.position, item)">
+                <ion-row *ngIf="(item.position == 'teacher') || (item.position == 'student')">
+                    <!-- <ion-col text-center>
+                        <img [src]="imgaddlogo+userphoto(item.photo)" style="width: 80px; height: 80px; border-radius: 60px; border: #497953 thin solid;">
+                        
+                        <p style="font-size: 11px; text-transform: capitalize; color: #000;">{{ item.name }}<br/> {{ item.position }}</p>
+                    </ion-col> -->
 
-</ion-scroll>
-
-
-	
-</ion-list>	
+                    <ion-avatar>
+                        <img [src]="imgaddlogo+userphoto(item.photo)" class="top-profile">
+                        <ion-label>{{ item.name }} <br/> {{ item.position }}</ion-label>
+                    </ion-avatar>
+                </ion-row>
+            </div>
+        </ion-scroll>
+    </ion-list>
 	
 	
 	
@@ -63,9 +55,12 @@
         Jobs
       </ion-segment-button>
     </ion-segment>
-<!--div style="background-color:#6699ff; height:48px;margin:3px 0 3px 0;">
+
+
+<!-- <div style="background-color:#6699ff; height:48px;margin:3px 0 3px 0;">
 <ion-searchbar style="background-color:#6699ff; height:20px; border-radius; padding:2px  ;" ></ion-searchbar>
-</div-->
+</div> -->
+
 
 <div [ngSwitch]="segments">
     <ion-list *ngSwitchCase="'timeline'" style="background-color:#E7E2E1; ">
@@ -259,9 +254,8 @@
 	
 	
   </div>
-<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-    <ion-infinite-scroll-content>
-      loadingSpinner="bubbles"
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>

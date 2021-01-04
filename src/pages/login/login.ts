@@ -2,23 +2,15 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams} from 'ionic-angular';
 import { ForgotenPage } from '../forgoten/forgoten';
 import { SignupPage } from '../signup/signup';
-import {TabsPage} from "../tabs/tabs";
+// import { TabsPage } from "../tabs/tabs";
 import { Storage } from '@ionic/storage';
 import { ApiProvider } from '../../providers/api/api';
-import {  ToastController } from 'ionic-angular';
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ToastController } from 'ionic-angular';
 
- 
- 
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+    selector: 'page-login',
+    templateUrl: 'login.html',
 })
 export class LoginPage {
    user:any="";
@@ -76,8 +68,9 @@ export class LoginPage {
               this.storage.get('phone').then((val) => {
               // console.log('Your age is', val);
               });		 
-          this.navCtrl.push(TabsPage);
+              //this.navCtrl.push('TabsPage');
             //this.app.getRootNav().setRoot(TabsPage);
+            this.navCtrl.setRoot('TabsPage');
             }else{
               
               this.presentToast("wrong Password or phone number ");	

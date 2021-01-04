@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
 import { Http} from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -15,6 +15,7 @@ import { SearchUserPage } from "../search-user/search-user";
  * Ionic pages and navigation.
  */
 
+@IonicPage()
 @Component({
 	selector: 'page-message',
 	templateUrl: 'message.html',

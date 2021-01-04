@@ -4,7 +4,6 @@ import {  ApiProvider } from '../../providers/api/api';
 import { Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Storage } from '@ionic/storage';
-import {NotificationpostPage} from "../notificationpost/notificationpost";
 import {MessagepostPage} from "../messagepost/messagepost";
 
 /**

@@ -3,8 +3,11 @@ import { IonicPageModule } from 'ionic-angular';
 import { ConnectPage } from './connect';
 
 @NgModule({
-  imports: [
-    IonicPageModule.forChild(ConnectPage),
-  ],
+	declarations: [
+		ConnectPage,
+	],
+	imports: [
+		IonicPageModule.forChild(ConnectPage),
+	],
 })
 export class ConnectPageModule {}

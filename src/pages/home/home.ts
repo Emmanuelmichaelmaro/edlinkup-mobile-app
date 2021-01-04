@@ -1,21 +1,21 @@
 import { Component,ViewChild } from '@angular/core';
-import { NavController,App  } from 'ionic-angular';
-import { Content } from 'ionic-angular';
-import { ApiProvider } from '../../providers/api/api';
-import {Http} from '@angular/http';
-import 'rxjs/add/operator/map';
-import {SchoolPage} from "../school/school";
-import {MessagePage} from "../message/message";
-import {NotificationPage} from "../notification/notification";
-import {  StudentPage} from "../student/student";
-import {  TeacherPage} from "../teacher/teacher";
-import {CommentsPage} from "../comments/comments";
-import { StatusBar } from '@ionic-native/status-bar';
+import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
+import { StatusBar } from '@ionic-native/status-bar';
+import { Content, IonicPage, NavController,App  } from 'ionic-angular';
+import 'rxjs/add/operator/map';
+import { CommentsPage } from "../comments/comments";
 import { DetailPage } from "../detail/detail";
-import {SearchprofilePage} from "../searchprofile/searchprofile";
+import { MessagePage } from "../message/message";
+import { NotificationPage } from "../notification/notification";
+import { SchoolPage } from "../school/school";
+import { SearchprofilePage } from "../searchprofile/searchprofile";
+import { StudentPage } from "../student/student";
+import { TeacherPage } from "../teacher/teacher";
+import { ApiProvider } from '../../providers/api/api';
 
 
+@IonicPage()
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html' 
@@ -27,7 +27,7 @@ export class HomePage {
 
     segments:any='timeline';
     panel:any='news';
-    data:any='';
+    data:any=[];
     accounts:any='';
     news:any='';
     limitID=0;
@@ -60,24 +60,6 @@ export class HomePage {
         });	
         this.statusBar.overlaysWebView(true);
         this.statusBar.backgroundColorByHexString('#ffffff') 
-    }
-
-      //pull to refresh method...
-    doRefresh(refresher) {
-		this.Api.getUpdates(0,10,this.panel,2).map(res => res.json())
-       .subscribe(data => {
-        this.data = data;
-		this.news=this.data.updates;
-		//console.log(this.panel);
-		
-       });
-		
-       
-
-        setTimeout(() => {
-            console.log('Async operation has ended');
-            refresher.complete();
-        }, 2000);
     }
  
  
@@ -246,31 +228,38 @@ export class HomePage {
 	
 	
 
+
+
+     // pull to refresh method...
+    doRefresh(refresher) {
+        this.Api.getUpdates(0, 10, this.panel, 2)
+            .map(res => res.json())
+            .subscribe(data => {
+                this.data = data;
+                this.news = this.data.updates;
+            });
+        
+        setTimeout(() => {
+            refresher.complete();
+        }, 2000);
+    }
 	
 	
-	
-    //infinite scroll method..
+    // infinite scroll method...
     doInfinite(infiniteScroll) {
-		this.limitID+=10;
-		console.log('LimitID '+this.limitID);
-		console.log('Limit '+this.limit);
-		console.log('panel '+this.panel);
-        this.Api.getUpdates(this.limitID,this.limit,this.panel,2).map(res => res.json())
-       .subscribe(data => {
-        this.data = data.updates;
-		for(var i=0;i<this.data.length;i++){
-			this.news.push(this.data[i]);
-		}
+		this.limitID += 10;
 		
-		console.log(this.news);
-		
-       });
-        //this.getPostsSample();
-        console.log('Begin async operation');
+        this.Api.getUpdates(this.limitID, this.limit, this.panel, 2)
+            .map(res => res.json())
+            .subscribe(data => {
+                this.data = data.updates;
+                
+                for(var i=0; i<this.data.length; i++) {
+                    this.news.push(this.data[i]);
+                }
+            });
 
         setTimeout(() => {
-
-            console.log('Async operation has ended');
             infiniteScroll.complete();
         }, 500);
     }

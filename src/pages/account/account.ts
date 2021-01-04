@@ -1,4 +1,5 @@
 import {  Component } from '@angular/core';
+import { IonicPage } from 'ionic-angular';
 import {  ApiProvider } from '../../providers/api/api';
 import {  Http} from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -18,6 +19,7 @@ import { DetailPage } from "../detail/detail";
  * Ionic pages and navigation.
  */
 
+@IonicPage()
 @Component({
   selector: 'page-account',
   templateUrl: 'account.html',

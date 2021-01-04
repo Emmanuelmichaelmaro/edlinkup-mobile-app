@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import { Storage } from '@ionic/storage';
-import { Subject } from 'rxjs/Subject';
+// import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class ApiProvider {

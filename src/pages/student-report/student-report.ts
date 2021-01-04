@@ -1,16 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, Platform } from 'ionic-angular';
+import { IonicPage, LoadingController, NavController, NavParams, ToastController } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
+
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 pdfMake.vfs=pdfFonts.pdfMake.vfs;
 
-// File Download
-import { LoadingController } from 'ionic-angular';
-import * as jsPDF from 'jspdf';
-import domtoimage from 'dom-to-image';
-import { File, IWriteOptions } from '@ionic-native/file';
-import { FileOpener } from '@ionic-native/file-opener';
 
 /**
  * Generated class for the StudentReportPage page.
@@ -72,7 +67,7 @@ export class StudentReportPage {
   }
   pdfObj=null;
     
-    constructor(public navCtrl: NavController, private plt: Platform, public toastCtrl: ToastController, public navParams: NavParams, public Api:ApiProvider, public loadingCtrl: LoadingController, private file: File, private fileOpener: FileOpener) {
+    constructor(public navCtrl: NavController, public toastCtrl: ToastController, public navParams: NavParams, public Api:ApiProvider, public loadingCtrl: LoadingController) {
         this.schoolstamp=navParams.get('schoolstamp');
         this.schoolname=navParams.get('schoolname');
         this.reportData=navParams.get('datas');

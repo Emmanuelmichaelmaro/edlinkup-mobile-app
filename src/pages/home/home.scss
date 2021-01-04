@@ -1,81 +1,71 @@
 page-home {
 
-ion-scroll[scrollX] {
+    ion-scroll[scrollX] {
+        white-space: nowrap;
 
-white-space: nowrap;
+        height: 130px;
 
-height:130px;
+        overflow: hidden;
 
-overflow: hidden;
+        .scroll-item {
+            background-color:#ffffff;
+            display: inline-block;
+            overflow:hide;
+            margin-bottom:10px;
+            font-size:12px;
+        }
+    }
 
-.scroll-item {
-background-color:#ffffff;
-display: inline-block;
-overflow:hide;
-margin-bottom:10px;
-font-size:12px;
-}
+    .div-scroll {
+        height: 130px;
+        width: 100%;
+        overflow-x: scroll;
+    }
 
+    .div-scroll::-webkit-scrollbar {
+        border:none;
+        width:0;
+        background: rgba(0,0,0,0);
+    }
 
+    .div-scroll::-webkit-scrollbar-track {
+        border:none;
+        width:0;
+        background: rgba(0,0,0,0);
+    }
 
+    .div-scroll::-webkit-scrollbar-thumb {
+        border:none;
+        width:0;
+        background: rgba(0,0,0,0);
+    }
 
-}
+    $colors: (
+        primary:    #488aff,
+        secondary:  #32db64,
+        danger:     #f53d3d,
+        light:      #222,
+        dark:       #222
+    );
 
+    $ion-segment-button-md-active-color:#003399;;
+    $ion-segment-button-md-inactive-color:#000000;
 
+    h1 {
+        font-family: vernada,tahoma, sans-serif;
+        font-size:13px;
+        font-weight:bold;
+        color:#28292A;
+    }
 
-.div-scroll{
-  height: 130px;
-  width:100%;
-  overflow-x: scroll;
-}
+    ion-scroll.scroll-x .scroll-content {
+        padding: 16px 0 !important;
+    }
 
-
-
-.div-scroll::-webkit-scrollbar {
-  border:none;
-  width:0;
-  background: rgba(0,0,0,0);
-}
- 
-.div-scroll::-webkit-scrollbar-track {
-  border:none;
-  width:0;
-  background: rgba(0,0,0,0);
-}
- 
-.div-scroll::-webkit-scrollbar-thumb {
-  border:none;
-  width:0;
-  background: rgba(0,0,0,0);
-}
-
-
-
-
-
-$colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #222,
-  dark:       #222
-  
-);
-
-$ion-segment-button-md-active-color:#003399;;
-$ion-segment-button-md-inactive-color:#000000;
-
-
-h1 {
-font-family: vernada,tahoma, sans-serif;
-font-size:13px;
-font-weight:bold;
-color:#28292A;
-}
-
-
-
-
-
+    ion-avatar .top-profile {
+        width: 80px;
+        height: 80px;
+        border-radius: 60px;
+    }
 
 }

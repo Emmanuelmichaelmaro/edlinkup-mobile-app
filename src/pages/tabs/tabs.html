@@ -1,7 +1,16 @@
-<ion-tabs  color="light"  class="show-tabbar" >
-    <ion-tab  [root]="tab1Root" tabTitle="Home" tabIcon="ios-home"></ion-tab>
-    <ion-tab  [root]="tab2Root" tabTitle="Account" tabIcon="ios-contact"></ion-tab>
-    <ion-tab  [root]="tab3Root" tabTitle="Connect" tabIcon="ios-link"></ion-tab>
-    <ion-tab  [root]="tab4Root" tabTitle="Notification" (click)="NotificationStatus='';"  tabBadge="{{NotificationStatus}}" tabBadgeStyle="danger"  tabIcon="ios-notifications"></ion-tab>
-    <ion-tab  [root]="tab5Root" tabTitle="Message" (click)="MessageStatus='';" tabBadge="{{MessageStatus}}" tabBadgeStyle="danger"  tabIcon="ios-chatbubbles"></ion-tab>
+<!-- <ion-tabs class="show-tabbar" color="light">
+    <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="ios-home"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="Account" tabIcon="ios-contact"></ion-tab>
+    <ion-tab [root]="tab3Root" tabTitle="Connect" tabIcon="ios-link"></ion-tab>
+    <ion-tab [root]="tab4Root" tabTitle="Notification" tabIcon="ios-notifications" (click)="NotificationStatus='';" tabBadge="{{ NotificationStatus }}" tabBadgeStyle="danger"></ion-tab>
+    <ion-tab [root]="tab5Root" tabTitle="Message" tabIcon="ios-chatbubbles" (click)="MessageStatus='';" tabBadge="{{ MessageStatus }}" tabBadgeStyle="danger"></ion-tab>
+</ion-tabs> -->
+
+
+<ion-tabs [selectedIndex]="myIndex">
+	<ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
+	<ion-tab [root]="tab2Root" tabTitle="Account" tabIcon="contacts"></ion-tab>
+	<ion-tab [root]="tab3Root" tabTitle="Connect" tabIcon="link"></ion-tab>
+	<ion-tab [root]="tab4Root" tabTitle="Notification" tabIcon="notifications"></ion-tab>
+	<ion-tab [root]="tab5Root" tabTitle="Message" tabIcon="chatbubbles"></ion-tab>
 </ion-tabs>

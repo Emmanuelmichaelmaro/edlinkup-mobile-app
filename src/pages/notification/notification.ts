@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -13,6 +13,7 @@ import { NotificationpostPage } from "../notificationpost/notificationpost";
  * Ionic pages and navigation.
  */
 
+@IonicPage()
 @Component({
 	selector: 'page-notification',
 	templateUrl: 'notification.html',

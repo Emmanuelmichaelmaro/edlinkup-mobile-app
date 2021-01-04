@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import { NavController, NavParams } from 'ionic-angular';
-import { AlertController, ActionSheetController, LoadingController, ToastController } from 'ionic-angular';
+import { ActionSheetController, LoadingController, ToastController } from 'ionic-angular';
 import { FileTransfer,FileUploadOptions, FileTransferObject} from '@ionic-native/file-transfer';
 import { Camera } from '@ionic-native/camera';
 

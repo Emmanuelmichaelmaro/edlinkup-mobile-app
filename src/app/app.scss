@@ -15,144 +15,144 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 @font-face {
-  font-family: Lato;
-  src: url(../assets/fonts/Lato-Bold.ttf);
+	font-family: Lato;
+	src: url(../assets/fonts/Lato-Bold.ttf);
 }
 
 * {
-  font-family: Lato;
+	font-family: Lato;
 }
 
 @font-face {
-  font-family: LatoBold;
-  src: url(../assets/fonts/Lato-Bold.ttf);
+	font-family: LatoBold;
+	src: url(../assets/fonts/Lato-Bold.ttf);
 }
 
 .card-div-title {
-  font-family: LatoBold;
+	font-family: LatoBold;
 }
 
 @-webkit-keyframes slideInBothWays {
-  0% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-  }
+	0% {
+		-webkit-transform: translate3d(-100%, 0, 0);
+	}
 
-  50% {
-    -webkit-transform: translate3d(50%, 0, 0);
-  }
+	50% {
+		-webkit-transform: translate3d(50%, 0, 0);
+	}
 
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-  }
+	100% {
+		-webkit-transform: translate3d(0, 0, 0);
+	}
 }
 
 .slide-in-both-ways {
-  -webkit-animation: slideInBothWays ease-in 1;
-  animation: slideInBothWays ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-duration: 750ms;
-  animation-duration: 750ms;
+	-webkit-animation: slideInBothWays ease-in 1;
+	animation: slideInBothWays ease-in 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-duration: 750ms;
+	animation-duration: 750ms;
 }
 
 @-webkit-keyframes animateInPrimary {
-  0% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-  }
+	0% {
+		-webkit-transform: translate3d(-100%, 0, 0);
+	}
 
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-  }
+	100% {
+		-webkit-transform: translate3d(0, 0, 0);
+	}
 }
 
 @-webkit-keyframes animateInSecondary {
 
-  0% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 0;
+	}
 
-  50% {
-    opacity: 0;
-  }
+	50% {
+		opacity: 0;
+	}
 
-  100% {
-    opacity: 1;
-  }
+	100% {
+		opacity: 1;
+	}
 }
 
 .animate-in-primary {
-  -webkit-animation: animateInPrimary;
-  animation: animateInPrimary;
-  -webkit-animation-duration: 750ms;
-  animation-duraton: 750ms;
+	-webkit-animation: animateInPrimary;
+	animation: animateInPrimary;
+	-webkit-animation-duration: 750ms;
+	animation-duraton: 750ms;
 }
 
 .animate-in-secondary {
-  -webkit-animation: animateInSecondary ease-in 1;
-  animation: animateInSecondary ease-in 1;
-  -webkit-animation-duration: 750ms;
-  animation-duraton: 750ms;
+	-webkit-animation: animateInSecondary ease-in 1;
+	animation: animateInSecondary ease-in 1;
+	-webkit-animation-duration: 750ms;
+	animation-duraton: 750ms;
 }
 
 @-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-  }
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+	}
 
-  25% {
-    -webkit-transform: translate3d(0, -30%, 0);
-  }
+	25% {
+		-webkit-transform: translate3d(0, -30%, 0);
+	}
 
-  50% {
-    -webkit-transform: translate3d(0, 0, 0);
-  }
+	50% {
+		-webkit-transform: translate3d(0, 0, 0);
+	}
 
-  75% {
-    -webkit-transform: translate3d(0, -30%, 0);
-  }
+	75% {
+		-webkit-transform: translate3d(0, -30%, 0);
+	}
 
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-  }
+	100% {
+		-webkit-transform: translate3d(0, 0, 0);
+	}
 }
 
 .bounce-animation {
-  -webkit-animation: bounce ease-in 1;
-  animation: bounce ease-in 1;
-  -webkit-animation-duration: 1000ms;
-  animation-duration: 1000ms;
+	-webkit-animation: bounce ease-in 1;
+	animation: bounce ease-in 1;
+	-webkit-animation-duration: 1000ms;
+	animation-duration: 1000ms;
 }
 
 @-webkit-keyframes listGrow {
-  0% {
-    -webkit-transform: scale3d(1, 0, 1);
-  }
+	0% {
+		-webkit-transform: scale3d(1, 0, 1);
+	}
 
-  100% {
-    -webkit-transform: scale3d(1, 1, 0);
-  }
+	100% {
+		-webkit-transform: scale3d(1, 1, 0);
+	}
 }
 
 .list-grow-animation {
-  -webkit-animation: listGrow ease-in 1;
-  animation: listGrow ease-in 1;
-  -webkit-animation-duration: 400ms;
-  animation-duration: 400ms;
+	-webkit-animation: listGrow ease-in 1;
+	animation: listGrow ease-in 1;
+	-webkit-animation-duration: 400ms;
+	animation-duration: 400ms;
 }
 
 .label-md {
-  margin: 13px 8px 13px 0;
+	margin: 13px 8px 13px 0;
 }
 
 ion-label {
-  margin: 0;
-  display: block;
-  overflow: hidden;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: inherit;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+	margin: 0;
+	display: block;
+	overflow: hidden;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	font-size: inherit;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }

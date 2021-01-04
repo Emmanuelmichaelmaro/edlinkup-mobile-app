@@ -1,9 +1,19 @@
 <ion-header>
-  <ion-navbar >
-    <ion-title >
-      <h1>Connect With</h1>
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-buttons left>
+            <button ion-button icon-only menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        
+        <ion-title text-center>Connectors</ion-title>
+        
+        <ion-buttons end>
+            <button ion-button icon-only clear (click)="search()">
+                <ion-icon ios="ios-search" md="md-search"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 <ion-content  style=" padding:0; margin:0;" >

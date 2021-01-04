@@ -3,10 +3,9 @@ import { NavController, NavParams,App } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
 import { Http} from '@angular/http';
 import 'rxjs/add/operator/map';
-import {TabsPage} from "../tabs/tabs";
 import { Storage } from '@ionic/storage';
 import { LoginPage } from '../login/login';
-import { AlertController , ActionSheetController, LoadingController, ToastController } from 'ionic-angular';
+import { ActionSheetController, LoadingController, ToastController } from 'ionic-angular';
 import { FileTransfer, FileTransferObject,FileUploadOptions } from '@ionic-native/file-transfer';
 import { Camera } from '@ionic-native/camera';
 import { ChangepasswordPage } from '../changepassword/changepassword';
@@ -37,7 +36,7 @@ export class DetailPage {
     public hideTabs:boolean = true;
     loginStatus: boolean =false;
 
-    constructor(public navCtrl: NavController, private alertCtrl: AlertController, public actionSheetCtrl: ActionSheetController,
+    constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController,
 		public navParams: NavParams, public loadingCtrl: LoadingController, public toastCtrl: ToastController,
 			public http:Http, public Api:ApiProvider, private storage: Storage,
 			    private transfer: FileTransfer, private camera: Camera, private app: App) {

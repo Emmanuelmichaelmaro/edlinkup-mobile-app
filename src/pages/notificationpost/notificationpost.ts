@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { IonicPage, NavController, NavParams ,ModalController } from 'ionic-angular';
+import { NavController, NavParams ,ModalController } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
 import { EditModalPage } from "../edit-modal/edit-modal";
 import { Storage } from '@ionic/storage';

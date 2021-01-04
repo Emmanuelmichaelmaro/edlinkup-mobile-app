@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
-import { NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProfileListPage } from "../profile-list/profile-list";
 import { ApiProvider } from '../../providers/api/api';
 
@@ -12,6 +12,7 @@ import { ApiProvider } from '../../providers/api/api';
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
+@IonicPage()
 @Component({
   selector: 'page-contact',
   templateUrl: 'contact.html'

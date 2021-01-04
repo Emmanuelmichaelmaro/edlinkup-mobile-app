@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {  ApiProvider } from '../../providers/api/api';
 import { ContactPage } from '../contact/contact';
 import {  Http} from '@angular/http';
 import 'rxjs/add/operator/map';
+
 /**
  * Generated class for the ConnectPage page.
  *
@@ -11,6 +12,7 @@ import 'rxjs/add/operator/map';
  * Ionic pages and navigation.
  */
 
+@IonicPage()
 @Component({
   selector: 'page-connect',
   templateUrl: 'connect.html',
